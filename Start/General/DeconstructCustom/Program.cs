@@ -6,6 +6,9 @@ Planet Earth = new Planet("Earth", 6371, 1, 150_980_000);
 Planet Venus = new Planet("Venus", 6052, 0, 108_930_000);
 
 // TODO: Use Deconstruction to get the name and moon count
-
+var (name, moons) = Earth;
+Console.WriteLine($"{name}, {moons}");
 
 // TODO: Use Deconstruction to get the name, moon count, and radius
+(name, moons, var radius) = Venus;
+Console.WriteLine($"{name}, {moons}, {radius}");
