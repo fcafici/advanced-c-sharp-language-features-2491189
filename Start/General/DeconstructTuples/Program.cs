@@ -22,7 +22,11 @@ Console.WriteLine($"{result.Item1}, {result.Item2}, {result.Item3}");
 
 // TODO: An easier way can be accomplished using named values and 
 // deconstructing the tuple into variables
-
+var (high, low, close) = GetStockValues("WXYZ");
+Console.WriteLine($"{high}, {low}, {close}");
 
 // TODO: You can also use explicit variable types, and the _ character can be
 // used to ignore any values that you don't plan to use
+decimal cl;
+(_, _, cl) = GetStockValues("ABCD");
+Console.WriteLine($"{cl}");
