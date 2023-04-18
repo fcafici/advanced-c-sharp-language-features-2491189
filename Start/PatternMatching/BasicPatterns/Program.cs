@@ -40,9 +40,9 @@ void dashedline(object o) {
     }
 }
 
-// dashedline(25);
-// dashedline("50");
-// dashedline(20.5);
+dashedline(25);
+dashedline("50");
+dashedline(20.5);
 
 //Property pattern examines the properties of an object
 bool IsTheIdesOfMarch(DateTime date) {
