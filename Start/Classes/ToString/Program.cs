@@ -8,6 +8,8 @@ string str = x.ToString();
 Console.WriteLine($"{str}");
 
 // TODO: Implement ToString to represent a custom type
+Person p = new Person() {FirstName="John", LastName="Doe", Age=25};
+System.Console.WriteLine($"{p}");
 
 public class Person {
     public string? FirstName {get; set;}
@@ -15,4 +17,5 @@ public class Person {
     public int Age {get; set;}
 
     // TODO: Override ToString to provide your own string representation
+    public override string ToString() => $"[Person] FirstName: {FirstName}, LastName: {LastName}, Age: {Age}";
 }
