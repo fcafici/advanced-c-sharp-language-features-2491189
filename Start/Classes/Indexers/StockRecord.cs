@@ -23,11 +23,27 @@ public class StockRecord {
     }
 
     // TODO: implement Length property 
-
+    public int Length => prices.Length;
 
     // TODO: implement this[] to enable indexing
-
+    public decimal this[int index] {
+        get => prices[index];
+    }
 
     // TODO: You can overload the indexer to provide another way to access
-
+    public decimal this[string day] {
+        get {
+            if (day == "mon")
+                return prices[0];
+            if (day == "tue")
+                return prices[1];
+            if (day == "wed")
+                return prices[2];
+            if (day == "thu")
+                return prices[3];
+            if (day == "fri")
+                return prices[4];
+            throw new IndexOutOfRangeException($"'{day}' is not a valid index to StockRecord");
+        }
+    }
 }

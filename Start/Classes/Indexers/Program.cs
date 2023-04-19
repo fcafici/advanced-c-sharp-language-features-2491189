@@ -10,6 +10,14 @@ Console.WriteLine($"High: {stock1.High:C}");
 Console.WriteLine($"Low: {stock1.Low:C}");
 
 // TODO: Use the indexer method
+Console.WriteLine($"Days: {stock1.Length}");
 
+for (int i=0; i<stock1.Length; i++) {
+    decimal val = stock1[i];
+    Console.WriteLine($"val[{i}] = {val:C} ");
+}
 
 // TODO: Index using a different value
+Console.WriteLine($"Monday: {stock1["mon"]:C}");
+Console.WriteLine($"Wednesday: {stock1["wed"]:C}");
+Console.WriteLine($"Error: {stock1["that's what she said"]:C}");
